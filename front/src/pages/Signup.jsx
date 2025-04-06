@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 
-// Styles (réutilisables depuis Login.jsx)
 const PageContainer = styled.div`
   background-color: #12364B;
   min-height: 100vh;
@@ -61,7 +60,6 @@ const SubmitButton = styled.button`
 export default function Signup() {
   return (
     <>
-      <Header />
       <PageContainer>
         <SignupBox>
           <Title>Nice to meet you</Title>

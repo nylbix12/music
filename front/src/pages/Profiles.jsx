@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import { FaHeart, FaRegHeart, FaMusic } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
-// Styles
+
 const PageContainer = styled.div`
   background-color: #f5f5f5;
   min-height: 100vh;
@@ -124,7 +124,6 @@ const ChatButton = styled.button`
 `;
 
 export default function Profiles() {
-  // Données des profils
   const navigate = useNavigate();
   const profiles = [
     {
@@ -135,7 +134,7 @@ export default function Profiles() {
       rating: 4.8,
       bio: "Chanteuse jazz et soul avec 10 ans d'expérience. J'ai performé dans les plus grands clubs parisiens et collaboré avec des artistes internationaux.",
       songs: ["La Vie en Rose", "Fly Me to the Moon", "Autumn Leaves"],
-      image: "./assets/prof1.jpg" // Remplacez par une vraie URL
+      image: "./assets/.prof1.jpg" 
     },
     {
       id: 2,
@@ -161,7 +160,6 @@ export default function Profiles() {
 
   return (
     <>
-      <Header />
       <PageContainer>
         <ContentBox>
           <TitleSection>

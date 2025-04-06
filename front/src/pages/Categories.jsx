@@ -2,39 +2,38 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import { motion } from 'framer-motion'
-
-// Styles
+// Conteneur principal de la page, avec un fond sombre et un padding.
 const PageContainer = styled.div`
   background-color: #12364B;
   min-height: 100vh;
   padding: 2rem;
 `;
-
+// Section héro qui contient le titre principal et le sous-titre.
 const HeroSection = styled.div`
   text-align: center;
   margin-bottom: 3rem;
 `;
-
+// Titre principal de la page.
 const MainTitle = styled.h1`
   color: white;
   font-size: 2.5rem;
   margin-bottom: 1rem;
 `;
-
+// Sous-titre de la page avec une couleur de texte claire et un maximum de largeur.
 const Subtitle = styled.p`
   color: #B0C4D9;
   font-size: 1.2rem;
   max-width: 600px;
   margin: 0 auto;
 `;
-
+// Grille de catégories, avec une disposition automatique des éléments.
 const CategoriesGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
 `;
-
+// Carte représentant chaque catégorie. Elle inclut des animations au survol.
 const CategoryCard = styled(motion(Link))`
   position: relative;
   height: 200px;
@@ -67,14 +66,14 @@ const CategoryCard = styled(motion(Link))`
     transition: opacity 0.3s;
   }
 `;
-
+// Image de fond de chaque carte, avec une taille et un positionnement ajustés.
 const CategoryImage = styled.div`
   height: 100%;
   background-image: url(${props => props.imgUrl});
   background-size: cover;
   background-position: center;
 `;
-
+// Titre de la catégorie, qui s'affiche au bas de chaque carte.
 const CategoryTitle = styled.div`
   position: absolute;
   bottom: 20px;
@@ -87,12 +86,12 @@ const CategoryTitle = styled.div`
   transform: translateY(20px);
   transition: all 0.3s;
 `;
-
+// Section inférieure contenant le lien vers plus de catégories et la barre de recherche.
 const BottomSection = styled.div`
   text-align: center;
   margin-top: 3rem;
 `;
-
+// Lien "Plus de catégories", avec un effet de soulignement au survol.
 const MoreLink = styled(Link)`
   color: #4361EE;
   font-size: 1.2rem;
@@ -104,7 +103,7 @@ const MoreLink = styled(Link)`
     text-decoration: underline;
   }
 `;
-
+// Barre de recherche, avec un style responsive et un padding adapté.
 const SearchBar = styled.input`
   width: 100%;
   max-width: 500px;
@@ -116,7 +115,7 @@ const SearchBar = styled.input`
   display: block;
 `;
 
-// Données des catégories
+// Tableau des catégories avec leurs informations (ID, nom, image et chemin).
 const categories = [
   {
     id: 1,
@@ -167,17 +166,16 @@ const categories = [
     path: "/profiles/bassists"
   }
 ];
-
+// Composant principal de la page des catégories
 export default function Categories() {
   return (
-    <>
-      <Header />
+    <>{/* Section héro */}
       <PageContainer>
         <HeroSection>
           <MainTitle>Discover Top Music Production Pros</MainTitle>
           <Subtitle>Find and connect with the best music professionals for your next project</Subtitle>
         </HeroSection>
-
+{/* Grille des catégories */}
         <CategoriesGrid>
           {categories.map(category => (
             <CategoryCard key={category.id} to={category.path}>
@@ -188,7 +186,7 @@ export default function Categories() {
             </CategoryCard>
           ))}
         </CategoriesGrid>
-
+{/* Section inférieure avec lien "Plus de catégories" et barre de recherche */}
         <BottomSection>
           <MoreLink to="/all-categories">More categories</MoreLink>
           <SearchBar 

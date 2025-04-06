@@ -1,0 +1,34 @@
+Lundi 31/03/2025
+
+Objectifs : Démarrer le projet et préparer le terrain pour la conception.
+*Première réunion pour définir le périmètre du projet.
+*Définition des exigences et des fonctionnalités principales de l'application.
+*Démarrage de la création des maquettes pour l'interface utilisateur.
+
+Mardi 01/04/2025
+
+Objectifs : Finaliser les maquettes.
+*Finalisation des maquettes pour toutes les pages principales.
+*Discussion avec l’équipe pour valider le design.
+*Lancement de la création de la base de données pour l'application.
+
+Mercredi 02/04/2025
+
+Objectifs : Début du codage du front-end.
+*Création de la structure de l’application avec React Vite.
+*Mise en place des premières pages en fonction des maquettes.
+*Création des repos Git pour gérer le code et suivre les versions du projet.
+
+Jeudi 03/04/2025
+
+Objectifs : Continuer le développement du front-end et tester les premières fonctionnalités.
+*Intégration des composants React en suivant le design des maquettes.
+*Mise en place de l’interactivité de base avec les hooks React.
+*Tests locaux pour vérifier le rendu visuel et l’interaction des composants.
+
+Vendredi 04/04/2025
+
+Objectifs : Connecter le front-end avec le back-end.
+*Relié le front-end avec le back-end (API) pour activer les fonctionnalités comme l’envoi et la réception des données.
+*Test des appels API pour vérifier la bonne réception des données et la gestion des erreurs.
+*Début des tests d’intégration entre les deux parties de l’application.

@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import { useState } from 'react';
 
-// Styles (inchangés)
 const PageContainer = styled.div`
   background-color: #12364B;
   min-height: 100vh;
@@ -107,11 +106,11 @@ export default function Login() {
         throw new Error(data.message || 'Échec de la connexion');
       }
 
-      // Stockage du token (à adapter selon votre backend)
+      
       localStorage.setItem('authToken', data.token);
       
-      // Redirection vers la page d'accueil après connexion
-      navigate('/');
+  
+      navigate('/Home');
 
     } catch (err) {
       setError(err.message || 'Une erreur est survenue');
@@ -122,7 +121,6 @@ export default function Login() {
 
   return (
     <>
-      <Header />
       <PageContainer>
         <LoginBox>
           <Title>Welcome back</Title>
